@@ -16,9 +16,9 @@ class MainAdapter(private val job: JobResponse): RecyclerView.Adapter<MainAdapte
         private val binding : ItemJobBinding by viewBinding()
 
         fun bindView(item: Data) = with(binding){
-            companyName.text = item.company_name
-            title.text = item.title
-            location.text= "Job area ${item.location}"
+            companyName.text = "Company name : ${item.company_name}"
+            title.text = "Title : ${item.title}"
+            location.text= "Job area : ${item.location}"
         }
 
     }
