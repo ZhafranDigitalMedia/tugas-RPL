@@ -34,6 +34,6 @@ class MainAdapter(private val job: JobResponse): RecyclerView.Adapter<MainAdapte
     }
 
     override fun getItemCount(): Int {
-        return job.data.size
+        return job.data?.size ?:0
     }
 }
