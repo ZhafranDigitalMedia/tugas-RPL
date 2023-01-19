@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">tugas</string>
+    <string name="app_name">Find Your Job</string>
+    <string name="Location">Vollzeit (unbefristet),fachverantwortung</string>
+    <string name="more_information">More Information</string>
+    <string name="Title">Vollzeit (unbefristet),fachverantwortung</string>
+    <string name="Job_type">Vollzeit (unbefristet),fachverantwortung</string>
+    <string name="Tag">Project Management</string>
+    <string name="company">Project Management</string>
 </resources>

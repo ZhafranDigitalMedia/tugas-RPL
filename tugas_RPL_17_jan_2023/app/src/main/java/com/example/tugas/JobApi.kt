@@ -6,7 +6,7 @@ import retrofit2.http.GET
 interface JobApi {
 
     @GET("job-board-api")
-    suspend fun car(
+    suspend fun Job(
 //        @Query("format") format: String = FORMAT
     ): JobResponse
 

@@ -1,5 +1,6 @@
 package com.example.tugas
 
+import android.content.ClipData.Item
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.example.tugas.model.JobResponse
 
 class MainAdapter(private val job: JobResponse): RecyclerView.Adapter<MainAdapter.JobViewHolder>() {
 
+    var itemJobClickListener: ((Data) -> Unit)? = null
     class JobViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         private val binding : ItemJobBinding by viewBinding()
 
@@ -31,6 +33,9 @@ class MainAdapter(private val job: JobResponse): RecyclerView.Adapter<MainAdapte
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
         val item = job.data[position]
         holder.bindView(item)
+        holder.itemView.setOnClickListener {
+            itemJobClickListener?.invoke(item)
+        }
     }
 
     override fun getItemCount(): Int {
